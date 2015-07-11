@@ -8,6 +8,18 @@ var mixedArray = ['Dog', 0, undefined, "multiple words", NaN, 10, false, true, 1
 //the above array and return a new array that contains only the truthy values 
 //(in the same order). Expected: ['Dog', "multiple words", 10, true, 1];
 
+var falsyFilter = function (array) {
+	var newArr = [];
+	for (var i = 0; i < array.length; i++) {
+		if (array[i]) {
+			newArr.push(array[i]);
+		};
+	}
+	return newArr
+}
+
+console.log(falsyFilter(mixedArray));
+
 //####################################################################################
 // 2. Problem
 //####################################################################################
@@ -17,12 +29,20 @@ var mixedArray = ['Dog', 0, undefined, "multiple words", NaN, 10, false, true, 1
 //time the count() function is called.
 
 // Code Here
+var makeCounter = function () {  //I Don't think this is working yet
+	var counter = 0;
+	counter++;
+	return counter;
+}
 
   var count = makeCounter();
   
 var firstCall = count();  // firstCall = 1
 var secondCall = count(); // secondCall = 2;
 var thirdCall = count();  // thirdCall = 3
+console.log(firstCall);
+console.log(secondCall);
+console.log(thirdCall);
 
 //####################################################################################
 // 3. Problem
